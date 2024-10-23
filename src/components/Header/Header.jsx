@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from "../photo/image.png"
 import {Link , NavLink} from 'react-router-dom'
 
 
@@ -9,7 +10,7 @@ export default function Header() {
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                     <Link to="/" className="flex items-center">
                         <img
-                            src="src/components/photo/image.png"
+                            src={logo}
                             className="mr-3 h-12"
                             alt="Logo"
                         />
