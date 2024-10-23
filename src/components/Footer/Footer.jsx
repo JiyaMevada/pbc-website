@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from "../photo/image.png"
 import {Link , NavLink } from 'react-router-dom'
 
 export default function Footer() {
@@ -9,7 +10,8 @@ export default function Footer() {
                     <div className="mb-6 md:mb-0">
                     <Link to="/" className="flex items-center">
     <img
-        src="src/components/photo/image.png"
+        src={logo}
+
         style={{ height: '100px', width: 'auto' }}  // Custom height
         className="mr-3"
         alt="Logo"
