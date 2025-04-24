@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import authService from '../../appwrite/auth'; // adjust the path if needed
-import logo from "../photo/image.png"
+import logo from "../photo/image.png";
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -17,27 +16,16 @@ const SignUp = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setError(null);
 
-    // Sanitize the username to ensure it's valid for Appwrite's user ID constraints
-    const sanitizedUsername = formData.username.replace(/[^a-zA-Z0-9_.-]/g, '').toLowerCase();
-    if (sanitizedUsername.length > 36) {
-      setError('Username is too long. Please use a shorter name.');
-      return;
-    }
-
-    try {
-      // Pass sanitized username to authService.createAccount
-      await authService.createAccount({
-        email: formData.email,
-        password: formData.password,
-        name: formData.username,
-      });
+    // Simulate creating an account (no backend)
+    if (formData.username && formData.email && formData.password) {
+      // On successful "signup", directly navigate to dashboard
       navigate('/dashboard'); // Redirect after signup
-    } catch (err) {
-      setError(err.message || 'Something went wrong!');
+    } else {
+      setError('Please fill all fields!');
     }
   };
 
@@ -100,4 +88,3 @@ const SignUp = () => {
 };
 
 export default SignUp;
-
