@@ -162,7 +162,7 @@ function Dashboard() {
             <img
               src="/certificate.jpg"// Add the correct image path here
               alt="Certificate of Completion"
-              className="w-1/2 border rounded-lg shadow-lg"
+              className="w-99 border rounded-lg shadow-lg"
             />
           </div>
         </div>
