@@ -39,7 +39,31 @@ export default function Home() {
             </div>
 
             <h1 className="text-center text-3xl sm:text-3xl py-10 font-medium">“Connecting Students with Software Companies to Power Open Source Innovation.”</h1>
-        
-        <marquee behavior="" direction="left"> images </marquee></div>
+            <div className="overflow-hidden w-full bg-white py-4">
+  <div className="flex animate-slide items-center space-x-6">
+    {[
+      'google.jpg',
+      'microsoft.jpg',
+      'perplex.jpg',
+      'amazondtl.jpg',
+      'adobe.jpg',
+      'google.jpg',
+      'microsoft.jpg',
+      'perplex.jpg',
+      'amazondtl.jpg',
+      'adobe.jpg'
+    ].map((src, index) => (
+      <img
+        key={index}
+        src={src}
+        alt={`Logo ${index}`}
+        className="w-40 h-24 object-contain bg-white p-2 rounded"
+      />
+    ))}
+  </div>
+</div>
+
+
+  </div>
     );
 }
